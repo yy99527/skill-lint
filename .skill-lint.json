@@ -1,0 +1,15 @@
+{
+  "ignore": [],
+  "failOn": "high",
+  "customRules": [
+    {
+      "id": "TEAM001",
+      "title": "禁止访问内部域名",
+      "severity": "critical",
+      "category": "custom",
+      "pattern": "(\\.internal\\b|intranet\\.|10\\.0\\.\\d+\\.\\d+)",
+      "why": "技能不应访问内网地址，可能被用于横向移动。",
+      "fix": "改为通过网关访问，并在 SKILL.md 中说明。"
+    }
+  ]
+}
