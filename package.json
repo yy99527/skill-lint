@@ -1,0 +1,40 @@
+{
+  "name": "skill-lint",
+  "version": "1.0.0",
+  "description": "安全审计工具：扫描 AI Agent 技能（Claude Code / Codex / Cursor / DSH skills）中的危险命令、凭据外传与提示词注入",
+  "type": "module",
+  "bin": {
+    "skill-lint": "bin/skill-lint.js"
+  },
+  "main": "src/scanner.js",
+  "files": [
+    "bin",
+    "src",
+    "action.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/test.js",
+    "demo": "node bin/skill-lint.js examples/bad-skill",
+    "demo:good": "node bin/skill-lint.js examples/good-skill"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "skills",
+    "security",
+    "lint",
+    "claude-code",
+    "prompt-injection",
+    "supply-chain"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yy99527/skill-lint.git"
+  }
+}
