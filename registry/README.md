@@ -15,13 +15,13 @@
 }
 ```
 
-提交 PR 后维护者会手动跑一次 `skill-lint --json`，把评分贴回 PR 评论。（自动回评在 Roadmap 里，尚未实现）
+提交 PR 合入后，每周一 04:00 UTC 的 CI 会重扫并更新 [docs/leaderboard.md](../docs/leaderboard.md)。
 
 ## 计分说明
 
 - 扫描对象：`repo` + `path` 指向的目录
 - 评分：0–100，规则见 [docs/rules.md](../docs/rules.md)
-- 定期全量重扫与历史记录（`registry/history.jsonl`）为规划中功能，暂未上线
+- 每周一 04:00 UTC 自动重扫，分数变化追加记录在 `registry/history.jsonl`
 
 ## 榜单的用途
 

@@ -1,8 +1,50 @@
 [
   {
+    "name": "elvarofficial/teardown",
+    "repo": "https://github.com/elvarofficial/teardown",
+    "path": ".",
+    "note": "把任意机器变成可拆解的 3D 模拟器"
+  },
+  {
+    "name": "heydamir/unslop",
+    "repo": "https://github.com/heydamir/unslop",
+    "path": "skills/unslop",
+    "note": "把 AI 味过重的 UI 改成有设计感的界面"
+  },
+  {
+    "name": "ognjengt/founder-skills",
+    "repo": "https://github.com/ognjengt/founder-skills",
+    "path": "skills/cro-optimization",
+    "note": "创始人技能包：转化率优化"
+  },
+  {
+    "name": "SimoneAvogadro/android-reverse-engineering-skill",
+    "repo": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+    "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering",
+    "note": "Android 逆向分析辅助技能"
+  },
+  {
+    "name": "TerminalSkills/skills",
+    "repo": "https://github.com/TerminalSkills/skills",
+    "path": "skills/context7",
+    "note": "开源技能库：context7 文档查询"
+  },
+  {
+    "name": "tmchow/agent-skills",
+    "repo": "https://github.com/tmchow/agent-skills",
+    "path": "vhs-terminal-recorder",
+    "note": "跨平台技能：终端录制（vhs）"
+  },
+  {
+    "name": "virgiliojr94/book-to-skill",
+    "repo": "https://github.com/virgiliojr94/book-to-skill",
+    "path": ".",
+    "note": "把技术书籍 PDF 变成可学习的技能"
+  },
+  {
     "name": "yy99527/skill-lint",
     "repo": "https://github.com/yy99527/skill-lint",
     "path": "examples/good-skill",
-    "note": "示例：一个通过全部检查的干净技能"
+    "note": "本项目自带的满分基准技能"
   }
 ]

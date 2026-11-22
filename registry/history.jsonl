@@ -1,0 +1,8 @@
+{"date":"2026-11-22","name":"elvarofficial/teardown","repo":"https://github.com/elvarofficial/teardown","score":58,"grade":"D","findings":7,"critical":0,"high":0,"medium":7,"low":0}
+{"date":"2026-11-22","name":"heydamir/unslop","repo":"https://github.com/heydamir/unslop","score":98,"grade":"A","findings":1,"critical":0,"high":0,"medium":0,"low":1}
+{"date":"2026-11-22","name":"ognjengt/founder-skills","repo":"https://github.com/ognjengt/founder-skills","score":98,"grade":"A","findings":1,"critical":0,"high":0,"medium":0,"low":1}
+{"date":"2026-11-22","name":"SimoneAvogadro/android-reverse-engineering-skill","repo":"https://github.com/SimoneAvogadro/android-reverse-engineering-skill","score":0,"grade":"F","findings":26,"critical":0,"high":0,"medium":25,"low":1}
+{"date":"2026-11-22","name":"TerminalSkills/skills","repo":"https://github.com/TerminalSkills/skills","score":39,"grade":"F","findings":2,"critical":1,"high":0,"medium":0,"low":1}
+{"date":"2026-11-22","name":"tmchow/agent-skills","repo":"https://github.com/tmchow/agent-skills","score":98,"grade":"A","findings":1,"critical":0,"high":0,"medium":0,"low":1}
+{"date":"2026-11-22","name":"virgiliojr94/book-to-skill","repo":"https://github.com/virgiliojr94/book-to-skill","score":0,"grade":"F","findings":172,"critical":1,"high":4,"medium":123,"low":44}
+{"date":"2026-11-22","name":"yy99527/skill-lint","repo":"https://github.com/yy99527/skill-lint","score":100,"grade":"A","findings":0,"critical":0,"high":0,"medium":0,"low":0}
