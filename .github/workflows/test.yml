@@ -1,0 +1,29 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: 运行测试
+        run: npm test
+      - name: 干净样例应通过
+        run: node bin/skill-lint.js examples/good-skill --fail-on low
+      - name: 有毒样例应失败
+        run: |
+          if node bin/skill-lint.js examples/bad-skill --fail-on critical; then
+            echo "::error::bad-skill 未被拦截"; exit 1
+          else
+            echo "bad-skill 已按预期拦截"
+          fi

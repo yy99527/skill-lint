@@ -1,0 +1,32 @@
+name: 'skill-lint'
+description: '安全审计：扫描 AI Agent 技能中的危险命令、凭据外传与提示词注入'
+author: 'skill-lint'
+branding:
+  icon: 'shield'
+  color: 'green'
+
+inputs:
+  path:
+    description: '要扫描的目录'
+    required: false
+    default: '.'
+  fail-on:
+    description: '达到该级别即失败：critical | high | medium | low | none'
+    required: false
+    default: 'high'
+  sarif-file:
+    description: '可选：将 SARIF 结果写入该文件，便于上传到 Code Scanning'
+    required: false
+    default: ''
+  args:
+    description: '额外参数，例如 --ignore SL019'
+    required: false
+    default: ''
+
+outputs:
+  score:
+    description: '安全评分（0-100）'
+
+runs:
+  using: 'node20'
+  main: 'bin/skill-lint.js'
