@@ -34,6 +34,8 @@ skill-lint ./my-skill
 
 现在的技能市场有上万个 skill，**没有任何一个工具在装之前告诉你它想干什么**。这就是 skill-lint 要补的位。
 
+想 3 分钟看懂一个投毒技能长什么样，读 [实弹演示](docs/poisoned-skill-walkthrough.md)；想看真实公开技能的扫描结果，看 [安全分榜单](docs/leaderboard.md)。
+
 ---
 
 ## 30 秒开始
@@ -174,8 +176,9 @@ skill-lint [目录] [选项]
 - [x] 20 项检查（16 正则 + 1 组合 + 3 结构）
 - [x] CLI / JSON / SARIF / GitHub Action
 - [x] `.skill-lint.json` 自定义规则
-- [ ] **全网 skills 安全分榜单**（每周自动扫描 GitHub 上的热门 skills，公开排名）
-- [ ] 发布到 npm，支持 `npx skill-lint` 免安装使用
+- [x] **skills 安全分榜单**（registry + 每周自动重扫，热启动 8 个真实技能）→ [榜单](docs/leaderboard.md)
+- [ ] 自动发现 GitHub 热门 skills 并批量纳入榜单
+- [ ] 发布到 npm（`skill-lint` 包名已被他人占用，需改用 scope 或新名）
 - [ ] 规则市场：社区贡献的规则包，`extends: ["@skill-lint/rules-web3"]`
 - [ ] VS Code 插件：打开 `SKILL.md` 实时标红
 - [ ] LLM 二审：正则抓不到的自然语言越权意图
@@ -193,7 +196,7 @@ skill-lint [目录] [选项]
 ```bash
 git clone https://github.com/yy99527/skill-lint
 cd skill-lint
-npm test          # 19 项断言，无需安装依赖
+npm test          # 20 项断言，无需安装依赖
 npm run demo      # 看一份"有毒"技能的完整报告
 ```
 
