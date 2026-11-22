@@ -108,7 +108,8 @@ async function main() {
   const target = path.resolve(opts.target);
   if (!fs.existsSync(target)) {
     console.error(`\n  找不到路径：${target}\n`);
-    process.exit(2);
+    process.exitCode = 2;
+    return;
   }
 
   let config;
@@ -116,7 +117,8 @@ async function main() {
     config = loadConfig(target);
   } catch (e) {
     console.error(`\n  ${e.message}\n`);
-    process.exit(2);
+    process.exitCode = 2;
+    return;
   }
 
   const ignore = [...config.ignore, ...opts.ignore];
@@ -145,10 +147,11 @@ async function main() {
   const rank = { low: 1, medium: 2, high: 3, critical: 4 };
   const threshold = rank[failOn] || 3;
   const hit = result.findings.some(f => (rank[f.severity] || 0) >= threshold);
-  if (hit) process.exit(1);
+  // 不直接 process.exit(1)：管道场景下会截断尚未刷完的大体积 stdout（JSON/SARIF）
+  if (hit) process.exitCode = 1;
 }
 
 main().catch(e => {
   console.error(e);
-  process.exit(2);
+  process.exitCode = 2;
 });

@@ -1,5 +1,8 @@
 import assert from 'node:assert';
+import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { scan, score } from '../src/scanner.js';
 import { renderSarif, renderJson, grade } from '../src/report.js';
@@ -75,6 +78,19 @@ test('自定义规则可通过配置注入', () => {
 test('--ignore 生效', () => {
   const r = scan(path.join(root, 'examples/bad-skill'), { ignore: ['SL001', 'SL002', 'SL003', 'SL004', 'SL005', 'SL008', 'SL009', 'SL013', 'SL014', 'SL017', 'SL019'] });
   assert.strictEqual(r.findings.length, 0, JSON.stringify(r.findings.map(f => f.ruleId)));
+});
+
+test('CLI 大体积 JSON 管道输出完整可解析（不被 process.exit 截断）', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'skill-lint-'));
+  try {
+    fs.writeFileSync(path.join(dir, 'SKILL.md'), '---\nname: big-scan\n---\n');
+    fs.writeFileSync(path.join(dir, 'run.sh'), Array.from({ length: 220 }, (_, i) => `sudo cp a${i} /tmp/a${i}`).join('\n'));
+    const out = execFileSync(process.execPath, [path.join(root, 'bin/skill-lint.js'), dir, '--json', '--fail-on', 'none'], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+    const j = JSON.parse(out);
+    assert.ok(j.findings.length >= 220, `实际 ${j.findings.length}`);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 console.log(`\n  ${passed} 项通过\n`);
