@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T18:40:42.741Z",
+  "generatedAt": "2026-11-23T14:18:51.208Z",
   "total": 8,
   "skills": [
     {
@@ -16,7 +16,7 @@
         "medium": 0,
         "low": 0
       },
-      "scannedAt": "2026-11-22T18:40:42.741Z"
+      "scannedAt": "2026-11-23T14:18:51.208Z"
     },
     {
       "name": "heydamir/unslop",
@@ -32,7 +32,7 @@
         "medium": 0,
         "low": 1
       },
-      "scannedAt": "2026-11-22T18:40:19.297Z"
+      "scannedAt": "2026-11-23T14:18:47.146Z"
     },
     {
       "name": "ognjengt/founder-skills",
@@ -48,7 +48,7 @@
         "medium": 0,
         "low": 1
       },
-      "scannedAt": "2026-11-22T18:40:21.163Z"
+      "scannedAt": "2026-11-23T14:18:47.577Z"
     },
     {
       "name": "tmchow/agent-skills",
@@ -64,7 +64,7 @@
         "medium": 0,
         "low": 1
       },
-      "scannedAt": "2026-11-22T18:40:39.152Z"
+      "scannedAt": "2026-11-23T14:18:50.271Z"
     },
     {
       "name": "elvarofficial/teardown",
@@ -80,7 +80,7 @@
         "medium": 7,
         "low": 0
       },
-      "scannedAt": "2026-11-22T18:40:17.406Z"
+      "scannedAt": "2026-11-23T14:18:46.696Z"
     },
     {
       "name": "TerminalSkills/skills",
@@ -96,7 +96,7 @@
         "medium": 0,
         "low": 1
       },
-      "scannedAt": "2026-11-22T18:40:37.746Z"
+      "scannedAt": "2026-11-23T14:18:49.912Z"
     },
     {
       "name": "SimoneAvogadro/android-reverse-engineering-skill",
@@ -112,7 +112,7 @@
         "medium": 25,
         "low": 1
       },
-      "scannedAt": "2026-11-22T18:40:22.975Z"
+      "scannedAt": "2026-11-23T14:18:48.039Z"
     },
     {
       "name": "virgiliojr94/book-to-skill",
@@ -128,7 +128,7 @@
         "medium": 123,
         "low": 44
       },
-      "scannedAt": "2026-11-22T18:40:41.150Z"
+      "scannedAt": "2026-11-23T14:18:50.800Z"
     }
   ],
   "failures": []
